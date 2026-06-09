@@ -7,11 +7,12 @@ The dataset has 3 directories:
 1. train - contains 144 noisy document images
 2. train_cleaned - contains clean versions of the 144 noisy images
 3. test - contains 72 noisy images
-No ground truth (that is, cleaned images) are available for the test images.<br>
-The images are of different sizes. So, for the purpose of training and testing, they are all resized to 256 x 256 x 1.<br>
-The pixels are normalised to [0,1).
+<br>No ground truth (that is, cleaned images) are available for the test images.
+
 ## Training
-The noisy images are split into training and validation sets. The corresponding ground truth images are also split.<br>
+The images are of different sizes. So, for the purpose of training and testing, they are all resized to 256 x 256 x 1.<br>
+The pixels are normalised to [0,1).<br>
+The noisy images in the train directory are split into training and validation sets. The corresponding ground truth images are also split.<br>
 Mean Squared Error is taken as the loss function. Peak Signal to Noise Ratio (PSNR) and Structural Similarity Index (SSIM) are used as metrics.<br>
 Early stopping based on validation loss is used. <br>
 Batch size=4, epochs=150<br>
